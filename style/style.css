@@ -1,0 +1,504 @@
+@charset "utf-8";
+
+*
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin:0px;
+  padding:0px;
+}
+
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url(../fonts/league-spartan/LeagueSpartan-Bold.otf) format("truetype");
+}
+
+html{height:100%;}
+
+body{
+	background-color: #FAFAFA;
+}
+
+img {
+  border-radius: 5px;
+  border: solid  #61ECFF 0.2em;
+}
+
+section {
+  width: 80%;
+  max-width: 800px;
+  background-color: #FAFAFA;
+  margin: auto;
+}
+section ul{
+  margin-left: 20px;
+}
+h1{
+  font-family: 'LeagueSpartan', sans-serif;
+  font-size: 70px;
+  color: #61ECFF;
+  margin-left: 15px;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  color: #000000;
+  margin-left: 15px;
+}
+
+h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #000000;
+  margin-left: 15px;
+}
+
+hr{
+	margin: auto;
+	background-color: #61ECFF;
+	width: 80%;
+	height: 7px;
+	border-radius: 7px;
+}
+
+section p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: black;
+  text-align: justify;
+
+}
+ 
+section ul{ 
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: black;
+  text-align: justify;
+}
+/*partie haute*/
+
+header {
+	background-color: #252525;
+	background-size: cover;
+	text-align: center;
+  max-width: 1290px;
+  margin: auto;
+}
+header img{ 
+  margin-top: 5px;
+  margin-bottom: 5px;
+	width: 30%;
+}
+
+.checkbox{
+  height: 40px;
+  width: 80px;
+  background: #222;
+  appearance: none;
+  border-radius: 160px;
+  box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+              inset 0 8px 8px rgba(0,0,0,0.1),
+              inset 0 -4px 4px rgba(0,0,0,0.1);
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.checkbox::before{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: linear-gradient(to bottom,#444,#222);
+  border-radius: 160px;
+  transform: scale(0.9);
+  transition: 0.5s;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5),
+              inset 4px 4px rgba(255,255,255,0.2),
+              inset -4px 4px rgba(255,255,255,0.2);
+}
+
+.checkbox:checked{
+  background: #fff;
+  box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),
+              inset 0 2px 8px rgba(0,0,0,0.1),
+              inset 0 -4px 4px rgba(0,0,0,0.05);
+}
+
+.checkbox:checked::before{
+  left: 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1),
+              inset 4px 4px rgba(255,255,255,1),
+              inset -4px 4px rgba(255,255,255,1);
+  background: linear-gradient(to bottom,#eaeaea,#f9f9f9);
+}
+
+/*partie nav*/
+.topnav {
+  overflow: hidden;
+  background-color: #252525;
+  border: green 2px;
+  width: 80%;
+  margin: auto;
+}
+
+.topnav a {
+  font-family: 'Montserrat', sans-serif;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.topnav .icon {
+  display: none;
+  text-align: center;
+  margin: auto;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+}
+
+.dropdown .dropbtn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color:#252525 ;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #252525;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-size: 22px;
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color:#252525 ;
+  color: #61ECFF;
+}
+
+.dropdown-content a:hover {
+  background-color: #252525;
+  color: #61ECFF;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dark {
+  width:50px;
+  height:20px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+
+.dark:after {
+  content: "";
+  width:18px;
+  height: 18px;
+  position: absolute;
+  top:1px;
+  left:1px;
+  background: linear-gradient(180deg,#a3a0a0,#a3a0a0);
+  border-radius: 180px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+input:checked + label {
+  background: #242424;
+}
+input:checked + label:after {
+  left:49px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg,#777,#3a3a3a);
+}
+.dark, .dark:after:after {
+  transition: 0.3s
+}
+/*Fin partie bouton darkmod*/
+
+.ancrage{
+  font-style: oblique;
+  font-size: larger;
+  text-decoration: none;
+}
+
+/*partie basse*/
+
+footer{
+	background-size: cover;
+	background-color: #252525;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	color: white;
+	height: 110px;
+  vertical-align: middle;
+  max-width: 1290px;
+  margin: auto;
+}
+footer a{
+	text-decoration: none;
+	color: white;
+}
+
+footer .container {
+  height: 100%;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/*Fin partie basse*/
+
+form {
+  font-family:'Josefin Sans', sans-serif;
+}
+table {
+  margin:auto;
+  font-family:'Josefin Sans', sans-serif;
+}
+
+.container{
+  width: 100%;
+	overflow: auto;
+	padding: 5px 50px;
+}
+
+.container66{
+	float: right;
+	width: 67%;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.container33{
+	width: 33%;
+	float: right;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.container44{
+	width: 33%;
+	float: left;
+}
+.container55{
+	width: 33%;
+	float: right;
+}
+.container33 img{
+	width: 100%;
+}
+.container2{
+	overflow: auto;
+	padding: 5px 60px;
+}
+.container20{
+  float: left;
+  width: 20%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.container80{
+  float: left;
+  width: 80%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.container20 img{
+  width: 100%;
+}
+
+.accueil{
+  margin: auto;
+  text-align: center;
+}
+
+
+/* Partie formulaire*/
+input[type=text], select, textarea,input[type=number],input[type=email]{
+  width: 100%;
+  padding: 12px;
+  border: 0.2em solid #61ECFF;
+  border-radius: 5px; 
+  margin: 6px 0px 16px 0px;
+  background-color: white;
+}
+
+textarea.comment {height:150px;}
+
+input[type=submit] {
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+  border: 0.2em solid #61ECFF;
+  margin-left: 5px;
+}
+
+input[type=submit]:hover {
+  background-color: #61ECFF;
+  color: white;
+  transition: 0.3s ease-out all;
+}
+/*Fin partie formaulaire*/ 
+
+/* Adaptation tablette*/
+
+@media screen and (max-width: 769px) {
+  .topnav a, .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  header img{ 
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 50%;
+}
+  section {
+  width: 100%;
+  background-color: white;
+  margin: auto;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #252525;
+  border: green 2px;
+  width: 100%;
+  margin: auto;
+}
+}
+/* Fin adaptation tablette*/
+
+/* Adaptation mobile*/
+@media screen and (max-width: 425px) {
+  .topnav a, .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  header img{ 
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+  }
+  section {
+    width: 100%;
+    background-color: white;
+    margin: auto;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: #252525;
+    border: green 2px;
+    width: 100%;
+    margin: auto;
+  }
+  .container{
+    width: 100%;
+    overflow: auto;
+    padding: 5px 25px;
+  }
+  .container2{
+    overflow: auto;
+    padding: 5px 25px;
+  }
+  .accueil{
+    margin: auto;
+    text-align: center;
+    width: 100%;
+  }
+  .accueil img{
+    width: 100%;
+  }
+}
+/* Fin adaptation mbile*/
